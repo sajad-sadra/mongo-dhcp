@@ -24,11 +24,11 @@ Enviroment variables that use in the deploy procedure and placed in `.env` file.
 |----------|:-------------:|
 | DB | URL of mongodb server |
 | DB_LOG | if it was `no` then logs just print in the console. if `yes` then logs also add to the database |
-| SERVER | local IP address of this dhcp server |
-| ROUTER | default address of network gateway |
-| NETMASK | subnet mask of IP address |
-| BROADCAST | local network broadcast IP adress(same netword part with broadcast host part-255-)|
-| DNS1,DNS2 | default nameservers(you can leave DNS2 blank) |
+| SERVER | local IP address of this DHCP server |
+| ROUTER | default gateway of local network |
+| NETMASK | subnet mask |
+| BROADCAST | local network broadcast IP address(same network part with broadcast host part-255-)|
+| DNS1,DNS2 | default nameservers(you can leave DNS2, blank) |
 | LEASE | default lease time |
 
 # Database schema
@@ -56,9 +56,9 @@ If you change these properties in the database(for example with tools like [mong
 | Variable   |   Description      |
 |----------|:-------------:|
 | MAC |  physical network address of device |
-| IP |   IP-address that DHCP gave to this device    |
-| Name | name or comment just to ٰdetect or search easily in documents (the first one is automatically generated according to day and time but you should edit it)  ) |
-| Static | if it is `false` the document will be removed after lease time ended but if it is`true` this document will never be removed automatically |
+| IP |   IP-address that DHCP gave to this device  |
+| Name | name or comment just to ٰdetect or search easily in documents (first time it's automatically generated according to day and time but you should edit it)  ) |
+| Static | if it is `false` the document will be removed after lease time ended, but if it is`true` this document will never be removed automatically |
 | ReserveTime | code of time this document generated (don't change it)|
 | DNS  | array of nameserver  that must be passed to clients during DHCP-ack |
 | Router  | network gateway that must be passed to client during DHCP-ack |
