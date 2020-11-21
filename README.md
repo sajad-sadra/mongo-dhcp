@@ -24,11 +24,11 @@ Enviroment variables that use in the deploy procedure and placed in `.env` file.
 |----------|:-------------:|
 | DB | URL of mongodb server |
 | DB_LOG | if it was `no` then logs just print in the console. if `yes` then logs also add to the database |
-| SERVER | local ip address of this dhcp server |
+| SERVER | local IP address of this dhcp server |
 | ROUTER | default address of network gateway |
-| NETMASK | subnet mask of address |
+| NETMASK | subnet mask of IP address |
 | BROADCAST | local network broadcast IP adress(same netword part with broadcast host part-255-)|
-| DNS1,DNS2 | default dns server address(you can leave DNS2 blank) |
+| DNS1,DNS2 | default nameservers(you can leave DNS2 blank) |
 | LEASE | default lease time |
 
 # Database schema
